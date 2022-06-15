@@ -1,7 +1,8 @@
-import React from 'react';
-import { render, act, screen } from '@testing-library/react';
+import { render, act } from '@testing-library/react';
+import { ComponentType } from 'react';
 import { unmountComponentAtNode } from 'react-dom';
-import App from './App';
+import HomePage from './HomePage';
+import Home from '../components/Home/Home';
 
 jest.mock('../components/Home/Home', () => ({
 	default: () => <div id="mock">mocking</div>,
@@ -16,14 +17,15 @@ beforeEach(() => {
 
 afterEach(() => {
 	unmountComponentAtNode(container!);
+
 	container!.remove();
 	container = null;
 });
 
-test('Rendering the App root', () => {
+test('Home page rendering', () => {
 	act(() => {
-		render(<App />, { container: container! });
+		render(<HomePage />, { container: container! });
 	});
 
-	expect(screen.getByText('mocking')).toBeInTheDocument();
+	expect(container?.querySelector('#mock')?.textContent).toBe('mocking');
 });
