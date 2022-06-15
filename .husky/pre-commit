@@ -4,11 +4,11 @@
 yarn test && yarn lint && yarn format
 
 BRANCH=$(git branch --show-current)
-echo $BRANCH
+MASTER="master"
 
 git pull origin $BRANCH
 
-if [$BRANCH!="master"]
+if [$BRANCH!=$MASTER]
 then
 	echo "Pushing branch "$BRANCH" to origin"
 	git push origin $BRANCH
