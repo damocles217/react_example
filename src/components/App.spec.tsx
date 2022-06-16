@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, act, screen } from '@testing-library/react';
 import { unmountComponentAtNode } from 'react-dom';
 import App from './App';

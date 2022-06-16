@@ -1,4 +1,11 @@
+$page-color: rgb(42,42,42);
+
 .page {
 	width: 100%;
-	min-height: 100vh;
+	min-height: 90vh;
+	position: relative;
+
+	margin-top: 10vh;
+
+	background-color: $page-color;
 }
