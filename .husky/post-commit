@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+BRANCH=$(git branch --show-current)
+
+echo "Pushing branch "$BRANCH" to origin"
+git push -u origin $BRANCH
