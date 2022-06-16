@@ -1,11 +1,15 @@
-import React, { ComponentType } from 'react';
+import React, { ComponentType, Fragment } from 'react';
+import PostList from '../components/PostList/PostList';
 import Home from '../components/Home/Home';
 import Page from '../components/shared/page/Page';
 
 const HomePage: ComponentType = () => {
 	return (
 		<Page>
-			<Home />
+			<Fragment>
+				<Home />
+				<PostList />
+			</Fragment>
 		</Page>
 	);
 };

@@ -1,8 +1,7 @@
+import React from 'react';
 import { render, act } from '@testing-library/react';
-import { ComponentType } from 'react';
 import { unmountComponentAtNode } from 'react-dom';
 import HomePage from './HomePage';
-import Home from '../components/Home/Home';
 
 jest.mock('../components/Home/Home', () => ({
 	default: () => <div id="mock">mocking</div>,

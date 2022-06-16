@@ -15,7 +15,7 @@ const Home: ComponentType = () => {
 					href="https://github.com/damocles217/react_example"
 					target={'_blank'}
 					rel={'noreferrer'}
-					className={style.link}
+					className={`${style.link}`}
 				>
 					link.
 				</a>
@@ -25,6 +25,7 @@ const Home: ComponentType = () => {
 					Also it includes backend in different languages, as go, with gin;
 					nodejs, with nestjs and express; and python, with django.
 				</p>
+				<p>List of backend technologies</p>
 				<ul>
 					{backends.map((backend, index) => (
 						<li key={index}>
@@ -32,7 +33,7 @@ const Home: ComponentType = () => {
 								href=""
 								target={'_blank'}
 								rel={'noreferrer'}
-								className={style.link}
+								className={`${style.link}`}
 							>
 								{backend} backend source code
 							</a>
