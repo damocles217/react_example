@@ -23,7 +23,7 @@ jobs:
       - run:
           name: Install yarn and dependencies
           command: |
-            npm install -g yarn
+            sudo npm install -g yarn
             yarn --cache-folder ~/.cache/yarn
       - run: yarn workspaces info | head -n -1 > ~/frontend/workspace_info.txt
       - *restore_node_modules
