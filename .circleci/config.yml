@@ -49,7 +49,7 @@ jobs:
           command: bash .circleci/setup-heroku.sh
       - run:
           name: Setting on heroku
-          command: git push heroku master
+          command: git push heroku development
 
 workflows:
   version: 2
