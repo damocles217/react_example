@@ -6,6 +6,7 @@
 		"dev": "vite --mode dev",
 		"build": "tsc && vite build",
 		"preview": "vite preview",
+		"start": "yarn build && node server/server.js",
 		"test": "node --expose-gc ./node_modules/.bin/jest --maxWorkers=15% --logHeapUsage",
 		"test:watch": "node --expose-gc ./node_modules/.bin/jest --maxWorkers=25% --logHeapUsag --watch",
 		"lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
