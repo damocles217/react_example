@@ -1,6 +1,15 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
+yarn lint && yarn format
+yarn test
 
-yarn test && yarn lint && yarn format
+SUCCESS=$?
 
-echo "running pre commit"
+# 0 means that the operation successfully, otherwise, break
+if [$SUCCESS!=0]
+then
+	echo "Tests failed\n"
+	exit 1
+else
+	echo "running pre commit"
+fi
