@@ -2,6 +2,7 @@ import React from 'react';
 import { act, render, screen } from '@testing-library/react';
 import { unmountComponentAtNode } from 'react-dom';
 import PostList from './PostList';
+import { jest } from '@jest/globals';
 
 let container: HTMLDivElement | null = null;
 

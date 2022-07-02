@@ -1,4 +1,4 @@
-$page-color: rgb(42,42,42);
+$page-color: rgb(42, 42, 42);
 
 .page {
 	width: 100%;
@@ -8,4 +8,6 @@ $page-color: rgb(42,42,42);
 	margin-top: 10vh;
 
 	background-color: $page-color;
+	display: flex;
+	flex-direction: column;
 }

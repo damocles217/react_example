@@ -1,7 +1,7 @@
+import { act, render, screen } from '@testing-library/react';
 import * as React from 'react';
-import { render, act, screen } from '@testing-library/react';
 import { unmountComponentAtNode } from 'react-dom';
-import App from './App';
+import Signup from './Signup';
 
 let container: HTMLDivElement | null = null;
 
@@ -16,12 +16,10 @@ afterEach(() => {
 	container = null;
 });
 
-test('Rendering the App root', () => {
+test('Signup Component rendering', () => {
 	act(() => {
-		render(<App />, { container: container! });
+		render(<Signup />, { container: container! });
 	});
 
-	expect(
-		screen.getByText(`Hi there, This is a skill's show`),
-	).toBeInTheDocument();
+	expect(screen.getByText('Registrate ;)')).toBeInTheDocument();
 });

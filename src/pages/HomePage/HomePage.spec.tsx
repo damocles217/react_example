@@ -1,11 +1,7 @@
 import React from 'react';
-import { render, act } from '@testing-library/react';
+import { render, act, screen } from '@testing-library/react';
 import { unmountComponentAtNode } from 'react-dom';
 import HomePage from './HomePage';
-
-jest.mock('../components/Home/Home', () => ({
-	default: () => <div id="mock">mocking</div>,
-}));
 
 let container: HTMLDivElement | null = null;
 
@@ -26,5 +22,7 @@ test('Home page rendering', () => {
 		render(<HomePage />, { container: container! });
 	});
 
-	expect(container?.querySelector('#mock')?.textContent).toBe('mocking');
+	expect(
+		screen.getByText(`Hi there, This is a skill's show`),
+	).toBeInTheDocument();
 });
